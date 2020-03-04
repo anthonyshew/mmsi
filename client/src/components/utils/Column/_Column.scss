@@ -1,0 +1,28 @@
+.column {
+    display: inline-block;
+    width: 29.33333%;
+    padding: .5rem 2% 1.5rem;
+    min-width: 200px;
+    text-align: center;
+
+    .icon {
+        height: 100px;
+    }
+
+    .heading {
+        padding: 1rem 0;
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 18px;
+        line-height: 140%;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 880px) {
+    .column {
+        width: 85%;
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../../../styles/_variables.scss';
+
+.footer-container-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    font-family: $passion;
+    font-size: 20px;
+}
+
+@media (max-width: 880px) {
+    .footer-container-columns {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,12 @@
+@import '../../../styles/_variables.scss';
+
+.phone-icon {
+    height: 100px;
+    stroke: $blue;
+}
+
+.arc-small,
+.arc-medium,
+.arc-large {
+    visibility: hidden;
+}

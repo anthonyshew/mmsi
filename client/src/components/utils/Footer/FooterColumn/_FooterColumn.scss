@@ -1,0 +1,27 @@
+.footer-column {
+    display: inline-block;
+    width: 29.33333%;
+    padding: .5rem 2% 1.5rem;
+    min-width: 200px;
+    text-align: center;
+
+    .h3 {
+        padding-bottom: 1rem;
+        font-size: 24px;
+    }
+
+    .link-list {
+        display: inline-block;
+    }
+
+    .link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 880px) {
+    .column {
+        width: 85%;
+    }
+}

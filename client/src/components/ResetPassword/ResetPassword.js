@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Redirect, useParams } from 'react-router-dom'
+import { navigate, useParams } from '@reach/router'
 import './_ResetPassword.scss'
 
 const ResetPassword = ({ ...props }) => {
@@ -42,7 +42,7 @@ const ResetPassword = ({ ...props }) => {
     }
 
     if (success) {
-        return <Redirect to="/" />
+        return navigate('/')
     } else {
         return (
             <div className="container-reset-password">

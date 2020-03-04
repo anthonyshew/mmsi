@@ -1,6 +1,6 @@
 import React from 'react'
 import useStateValue from '../lib/hooks/useStateValue'
-import AdminDashboard from '../components/AdminDashboard'
+import AdminDashboard from '../components/AdminDashboard/AdminDashboard'
 import AdminLogin from '../components/lib/AdminLogin'
 
 const Protectedroute = ({ ...props }) => {

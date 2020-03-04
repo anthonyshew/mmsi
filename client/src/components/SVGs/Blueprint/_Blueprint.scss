@@ -1,0 +1,61 @@
+.svg-blueprint {
+    display: block;
+    width: 300px;
+    height: 214px;
+    margin: 1rem auto;
+    border-radius: 1rem;
+
+    .bottom-right-corner-angle {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        animation: draw 8s alternate infinite;
+    }
+
+    .center-draw {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: draw 6s alternate infinite;
+    }
+
+    .center-draw-2 {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: draw 8s alternate infinite;
+    }
+
+    .center-draw-3 {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 7s alternate infinite;
+    }
+
+    .center-draw-4 {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: draw 5s alternate infinite;
+    }
+
+    .center-draw-5 {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: draw 5s alternate infinite;
+    }
+
+    .center-draw-6 {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: draw 3s alternate infinite;
+    }
+
+    .center-draw-7 {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: draw 9s alternate infinite;
+    }
+
+    @keyframes draw {
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+}

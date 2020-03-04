@@ -1,0 +1,21 @@
+@import './_variables.scss';
+
+.home {
+    font-family: "Open Sans", sans-serif;
+
+    .header-home {
+        background-size: cover;
+        background-position: center;
+
+        h2 .line:first-of-type {
+            margin-top: 1rem;
+        }
+
+        h2 .line {
+            display: inline-block;
+            padding-right: 8px;
+        }
+
+
+    }
+}

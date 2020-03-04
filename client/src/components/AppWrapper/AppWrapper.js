@@ -1,16 +1,20 @@
 import React from 'react'
 import './_AppWrapper.scss'
-import useStateValue from '../../lib/hooks/useStateValue'
 import useViewportDimensions from '../../lib/hooks/useViewportDimensions'
+
+import LocalStorageManager from '../lib/LocalStorageManager'
+import CMSRequester from '../lib/CMSRequester'
+import ScrollToTop from '../lib/ScrollToTop'
 
 const AppWrapper = ({ children }) => {
 
     const [, viewportHeight] = useViewportDimensions()
 
-    const [{ activeTheme }] = useStateValue()
-
     return (
-        <div className={`app-wrapper theme-${activeTheme}`} style={{ minHeight: viewportHeight }}>
+        <div id="appWrapper" className="app-wrapper" style={{ height: viewportHeight }}>
+            <LocalStorageManager />
+            <CMSRequester />
+            <ScrollToTop />
             {children}
         </div>
     )

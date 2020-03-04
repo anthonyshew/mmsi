@@ -1,0 +1,87 @@
+@import '../../../../styles/_variables.scss';
+
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+
+    .background-dimmer {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5)
+    }
+
+    .close-button {
+        position: absolute;
+        z-index: 3;
+        top: 21px;
+        right: 1rem;
+        width: 160px;
+        cursor: pointer;
+    }
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        width: 80vw;
+        margin-left: auto;
+        padding-top: 5rem;
+        background-color: white;
+    }
+
+    .list-item-link {
+        font-family: "Passion One", cursive;
+        font-size: 24px;
+
+        .link {
+            display: inline-block;
+            padding: .5rem;
+        }
+    }
+
+    .thermostat {
+        position: absolute;
+        z-index: 3;
+        bottom: 20%;
+        right: 2.5vw;
+        width: 75vw;
+        max-height: 300px;
+        user-select: none;
+
+        .text,
+        .warning-min,
+        .warning-max {
+            font-family: $baloo;
+            font-size: 36px;
+            fill: black;
+        }
+
+        .current-temp {
+            font-family: $orbitron;
+            font-size: 68px;
+            fill: black;
+        }
+
+        .temp-up,
+        .temp-down {
+            cursor: pointer;
+        }
+
+
+        .warning-min,
+        .warning-max {
+            font-size: 24px;
+            opacity: 0;
+        }
+    }
+}

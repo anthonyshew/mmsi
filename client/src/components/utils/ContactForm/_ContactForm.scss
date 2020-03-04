@@ -1,0 +1,124 @@
+@import '../../../styles/_variables.scss';
+
+.contact-form {
+    padding-top: 2rem;
+    color: $blue;
+
+    .h3 {
+        padding-bottom: 1rem;
+        text-align: center;
+        font-family: "Open Sans", cursive;
+        font-size: 36px;
+        font-weight: 900;
+    }
+
+    .h4 {
+        padding: 1rem;
+        text-align: center;
+        color: #ffffff;
+        font-family: "Open Sans", cursive;
+        font-size: 24px;
+    }
+
+    .split {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+    }
+
+    .paragraph {
+        padding-top: 1rem;
+    }
+
+    .form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 1rem auto 2rem;
+        padding: 1rem 0;
+        border-radius: .2rem;
+    }
+
+    .form-section {
+        width: 80%;
+    }
+
+    .label {
+        display: inline-block;
+        padding-bottom: .5rem;
+
+        .label-text {
+            display: inline-block;
+            padding: 6px 0;
+        }
+
+        .error {
+            display: inline-block;
+            margin-left: .5rem;
+            padding: 6px 0.6rem;
+            color: #ffffff;
+            background-color: #990000;
+            font-size: 16px;
+            border-radius: 1rem;
+        }
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        padding: .4rem .6rem;
+        border-radius: .5rem;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    .error-other {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        background-color: $red;
+        color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .submit {
+        flex-basis: 100%;
+        position: absolute;
+        bottom: -15px;
+        right: 10px;
+        display: inline-block;
+        padding: 1rem;
+        border: none;
+        border-radius: 1rem;
+        font-family: "Passion One", cursive;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .split:first-of-type {
+        padding-bottom: 2rem;
+    }
+
+    .word-break {
+        display: block;
+    }
+
+    .email-icon {
+        height: 80px;
+    }
+}
+
+@media (max-width: 750px) {
+    .split {
+        min-width: 100%;
+    }
+}

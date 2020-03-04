@@ -1,0 +1,53 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+
+    .background-dimmer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(19, 33, 65, .4)
+    }
+
+    .container-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-x: hidden;
+    }
+
+    .header-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        z-index: 1;
+        text-align: center;
+        color: #ffffff;
+        font-size: 36px;
+    }
+
+    h2 {
+        z-index: 1;
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff;
+    }
+}
