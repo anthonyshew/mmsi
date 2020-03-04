@@ -1,0 +1,17 @@
+@import '../../styles/_reset.scss';
+
+.app-wrapper {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.theme-light {
+    background-color: white;
+    color: black;
+}
+
+.theme-dark {
+    background-color: black;
+    color: white;
+}
