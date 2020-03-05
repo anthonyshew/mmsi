@@ -17,8 +17,7 @@
       "path": "/privacy-policy"
     },
     {
-      "path": "/reset-password",
-      "matchPath": "/reset-password/*"
+      "path": "/reset-password"
     },
     {
       "path": "/terms-of-use"
