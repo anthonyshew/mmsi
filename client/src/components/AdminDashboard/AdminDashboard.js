@@ -31,9 +31,9 @@ const AdminDashboard = ({ ...props }) => {
                 <div className="sidebar">
                     <h1>Admin Dashboard</h1>
                     <ul className="link-list">
-                        <Link to={`/owner-admin/content-editor`} className="link"><li>Content Editor</li></Link>
-                        <Link to={`/owner-admin/settings`} className="link"><li>Settings</li></Link>
-                        <Link to={`/owner-admin/request-service`} className="link"><li>Request Service</li></Link>
+                        <li><Link to={`/owner-admin/content-editor`} className="link">Content Editor</Link></li>
+                        <li> <Link to={`/owner-admin/settings`} className="link">Settings</Link></li>
+                        <li> <Link to={`/owner-admin/request-service`} className="link">Request Service</Link></li>
                     </ul>
                     <img className="company-logo" src="/favicon.ico" alt="Company logo." />
                     <button className="logout-button" onClick={handleLogout}>Logout</button>
