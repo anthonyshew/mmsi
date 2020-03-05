@@ -5,10 +5,18 @@
  */
 
 module.exports = {
-  pathPrefix: '/client',
   proxy: {
     prefix: "/api",
     url: "http://localhost:5000"
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    'gatsby-plugin-sass',
+    'gatsby-plugin-remove-trailing-slashes',
+    {
+      resolve: 'gatsby-plugin-express',
+      options: {
+        output: 'config/gatsby-express.json'
+      }
+    }
+  ],
 }

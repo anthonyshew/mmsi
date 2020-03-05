@@ -7,7 +7,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
 const sendGrid = require('@sendgrid/mail')
-const validator = require('validator')
+const gatsbyExpress = require('gatsby-plugin-express')
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
@@ -57,18 +57,21 @@ if (!isDev && cluster.isMaster) {
   app.use(requireHTTPS)
   app.use(bodyParser.json())
 
-  // Priority serve any static files.
-  app.use(express.static(path.resolve(__dirname, '../client/public'), {
-    // Prevents router from using above line as index response
-    index: false,
-  }))
+  // // Priority serve any static files.
+  // app.use(express.static(path.resolve(__dirname, '../client/public'), {
+  //   // Prevents router from using above line as index response
+  //   index: false,
+  // }))
 
   let api = require('./api')
   app.use('/api', api)
 
-  // app.get('/owner-admin', (req, res) => {
-  //   res.sendFile(path.resolve(__dirname, '../client/public/owner-admin', 'index.html'))
-  // })
+  app.use(express.static((path.resolve(__dirname, 'public/'))))
+  app.use(gatsbyExpress(path.resolve(__dirname, 'config/gatsby-express.json'), {
+    publicDir: 'public/',
+    template: 'public/404/index.html',
+    redirectSlashes: true,
+  }))
 
   // // All remaining requests return the React app, so it can handle routing.
   // app.get('/', (req, res) => {
