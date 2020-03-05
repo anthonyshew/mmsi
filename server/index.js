@@ -67,7 +67,7 @@ if (!isDev && cluster.isMaster) {
   app.use('/api', api)
 
   app.use(express.static(path.resolve(__dirname, '../client/public/')))
-  app.use(gatsbyExpress(path.resolve(__dirname, '../client/public', 'config/gatsby-express.json'), {
+  app.use(gatsbyExpress(path.resolve(__dirname, '../client/', 'config/gatsby-express.json'), {
     publicDir: 'public/',
     template: 'public/404/index.html',
     redirectSlashes: true,
