@@ -9,6 +9,7 @@
     "scripts": {
         "start": "node server",
         "dev": "concurrently --kill-others-on-fail \" cd server && nodemon index.js \" \" cd client && npm run start \"",
+        "devbuild": "cd client && npm run build && cd .. && cd server && nodemon index.js",
         "build": "cd client && npm install && npm run build"
     },
     "cacheDirectories": [
