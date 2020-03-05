@@ -1,6 +1,6 @@
 {
     "name": "mmsi",
-    "version": "0.1.1",
+    "version": "2.0.0",
     "description": "Mission Mechanical Services Inc. Website",
     "engines": {
         "node": "13.x",
