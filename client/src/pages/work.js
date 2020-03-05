@@ -1,5 +1,5 @@
 import React from 'react'
-// import './_Work.scss'
+import { Helmet } from 'react-helmet'
 import useStateValue from '../lib/hooks/useStateValue'
 
 import Navbar from '../components/utils/Navbar/Navbar'
@@ -13,6 +13,12 @@ const Work = (props) => {
 
     return (
         <>
+            <Helmet
+                title="Our Projects - Mission Mechanical Services Inc."
+                description="The projects and work done by MMSI."
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <main className="container-work">
                 <Header

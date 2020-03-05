@@ -1,6 +1,6 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import '../styles/_Home.scss'
-
 
 import Navbar from '../components/utils/Navbar/Navbar'
 import ContactForm from '../components/utils/ContactForm/ContactForm'
@@ -9,6 +9,12 @@ import Footer from '../components/utils/Footer/Footer'
 const Home = (props) => {
     return (
         <>
+            <Helmet
+                title="Contact Us - Mission Mechanical Services Inc."
+                description="Information on how to contact us."
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <main className="home">
                 <ContactForm

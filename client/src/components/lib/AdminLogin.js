@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import gsap from 'gsap'
 
 import useStateValue from '../../lib/hooks/useStateValue'
@@ -91,6 +92,12 @@ const AdminLogin = ({ ...props }) => {
 
     return (
         <div className="admin-login">
+            <Helmet
+                title="Admin Login - Mission Mechanical Services Inc."
+                description="Log into the MMSI Administrative Dashboard."
+            >
+                <html lang="en" />
+            </Helmet>
             <img className="company-logo" src="/favicon.ico" alt="Company logo." />
             <h1 className="h1">Administrative Login</h1>
             <form className="form">

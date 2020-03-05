@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import '../styles/_ThankYou.scss'
 
 import Navbar from '../components/utils/Navbar/Navbar'
@@ -7,6 +8,12 @@ import Footer from '../components/utils/Footer/Footer'
 const ThankYou = (props) => {
     return (
         <>
+            <Helmet
+                title="Thank You - Mission Mechanical Services Inc."
+                description="Thank you from all of us at MMSI!"
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <main className="container-thank-you">
                 <img className="image" src="/favicon.ico" alt="MMSI Logo" title="MMSI appreciates your communication." />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import '../styles/_Legal.scss'
 
 import Navbar from '../components/utils/Navbar/Navbar'
@@ -7,6 +8,12 @@ import Footer from '../components/utils/Footer/Footer'
 const PrivacyPolicy = (props) => {
     return (
         <>
+            <Helmet
+                title="Privacy Policy - Mission Mechanical Services Inc."
+                description="The privacy policy of MMSI."
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <div className="privacy-policy">
                 <h2>Privacy Policy</h2>

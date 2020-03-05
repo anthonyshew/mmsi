@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import '../styles/_About.scss'
 import useStateValue from '../lib/hooks/useStateValue'
 
@@ -17,6 +18,12 @@ const About = (props) => {
 
     return (
         <>
+            <Helmet
+                title="About - Mission Mechanical Services Inc."
+                description="About our company."
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <main className="about">
                 <Header containerName="about"

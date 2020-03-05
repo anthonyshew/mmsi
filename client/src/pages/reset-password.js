@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Router, navigate, useParams } from '@reach/router'
+import { Helmet } from 'react-helmet'
 import '../styles/_ResetPassword.scss'
 
 import Navbar from '../components/utils/Navbar/Navbar'
@@ -56,6 +57,12 @@ const ResetPassword = ({ ...props }) => {
     } else {
         return (
             <>
+                <Helmet
+                    title="Reset Password - Mission Mechanical Services Inc."
+                    description="Reset the administrative password of MMSI (with the proper credentials)."
+                >
+                    <html lang="en" />
+                </Helmet>
                 <Navbar />
                 <main className="container-reset-password">
                     <form className="form">

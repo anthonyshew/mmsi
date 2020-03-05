@@ -1,5 +1,6 @@
 import React from 'react'
 import { Router, Link, navigate } from '@reach/router'
+import { Helmet } from 'react-helmet'
 import './_AdminDashboard.scss'
 
 import useStateValue from '../../lib/hooks/useStateValue'
@@ -24,6 +25,12 @@ const AdminDashboard = ({ ...props }) => {
 
     return (
         <div className="dashboard">
+            <Helmet
+                title="Adion Dashboard- Mission Mechanical Services Inc."
+                description="Welcome to your administrative panel, Tia or Rick or maybe even Brett."
+            >
+                <html lang="en" />
+            </Helmet>
             <div className="responsive-warning">
                 <p>Sorry, but we haven't optimized this view for mobile yet. Please open this back up on a desktop.</p>
             </div>

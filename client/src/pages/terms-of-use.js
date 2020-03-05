@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import '../styles/_Legal.scss'
 
 import Navbar from '../components/utils/Navbar/Navbar'
@@ -7,6 +8,12 @@ import Footer from '../components/utils/Footer/Footer'
 const TermsOfUse = (props) => {
     return (
         <>
+            <Helmet
+                title="Terms of Use - Mission Mechanical Services Inc."
+                description="The terms of us of the MMSI website."
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <div className="terms-of-use">
                 <h2>Mission Mechanical Services Inc. Terms of Service</h2>

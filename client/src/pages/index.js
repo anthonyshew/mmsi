@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import '../styles/_Home.scss'
 import gsap from 'gsap'
+import { Helmet } from 'react-helmet'
 
 import useStateValue from '../lib/hooks/useStateValue'
 
@@ -70,6 +71,12 @@ const Home = (props) => {
 
     return (
         <>
+            <Helmet
+                title="Home - Mission Mechanical Services Inc."
+                description="The digital home of Mission Mechanical Services Inc."
+            >
+                <html lang="en" />
+            </Helmet>
             <Navbar />
             <main className="home">
                 <Header
