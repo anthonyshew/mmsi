@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  pathPrefijx: '/client',
+  pathPrefix: '/client',
   proxy: {
     prefix: "/api",
     url: "http://localhost:5000"
