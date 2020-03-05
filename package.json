@@ -1,7 +1,7 @@
 {
-    "name": "boilerplate",
+    "name": "mmsi",
     "version": "0.1.1",
-    "description": "Wow! What a boilerplate!",
+    "description": "Mission Mechanical Services Inc. Website",
     "engines": {
         "node": "13.x",
         "npm": "6.x"
