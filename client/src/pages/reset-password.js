@@ -6,11 +6,11 @@ import Navbar from '../components/utils/Navbar/Navbar'
 import Footer from '../components/utils/Footer/Footer'
 
 export default ({ ...props }) => (
-    <Router>
-        <ResetPassword path="/reset-password/:token" />
+    <Router basepath="/reset-password">
+        <ResetPassword path="/" />
+        <ResetPassword path="/:token" />
     </Router>
 )
-
 
 const ResetPassword = ({ ...props }) => {
     const { token } = useParams()

@@ -57,12 +57,6 @@ if (!isDev && cluster.isMaster) {
   app.use(requireHTTPS)
   app.use(bodyParser.json())
 
-  // // Priority serve any static files.
-  // app.use(express.static(path.resolve(__dirname, '../client/public'), {
-  //   // Prevents router from using above line as index response
-  //   index: false,
-  // }))
-
   let api = require('./api')
   app.use('/api', api)
 
@@ -72,11 +66,6 @@ if (!isDev && cluster.isMaster) {
     template: 'public/404/index.html',
     redirectSlashes: true,
   }))
-
-  // // All remaining requests return the React app, so it can handle routing.
-  // app.get('/', (req, res) => {
-  //   res.sendFile(path.resolve(__dirname, '../client/public', 'index.html'))
-  // })
 
   app.listen(PORT, () => {
     console.log(chalk.underline(`Node ${isDev ? 'Dev Server' : 'Cluster Worker ' + process.pid}: Listening on port ${PORT}.`))
