@@ -33,6 +33,10 @@ const Footer = (props) => {
                     links={[['/privacy-policy', 'Privacy Policy']]}
                     linkColor={props.linkColor}
                 />
+                <FooterColumn
+                    links={[['/owner-admin', 'Owner Admin']]}
+                    linkColor={props.linkColor}
+                />
             </FooterContainerColumns>
         </footer>
     )

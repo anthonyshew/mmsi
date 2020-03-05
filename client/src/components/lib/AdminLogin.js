@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import gsap from 'gsap'
 
 import useStateValue from '../../lib/hooks/useStateValue'
 
@@ -12,8 +13,22 @@ const AdminLogin = ({ ...props }) => {
         domain: '',
     })
 
+    const [showForgotPasswordLink, setShowForgotPasswordLink] = useState(false)
     const [submissionErrors, setSubmissionErrors] = useState('Form initialized.')
+    const [isSubmitting, setIsSubmitting] = useState(false)
     const [isValidated, setIsValidated] = useState(false)
+
+    useEffect(() => {
+        if (showForgotPasswordLink) {
+            gsap.to(".email-reset", {
+                autoAlpha: 1
+            })
+        } else {
+            gsap.to(".email-reset", {
+                autoAlpha: 0
+            })
+        }
+    }, [showForgotPasswordLink])
 
     useEffect(() => {
         if (submissionErrors.length > 0) {
@@ -26,11 +41,23 @@ const AdminLogin = ({ ...props }) => {
     useEffect(() => {
         if (isValidated) {
             dispatch({
-                type: 'authLogin',
+                type: 'ADMIN_LOGIN',
                 boolean: isValidated
             })
         }
     }, [dispatch, isValidated])
+
+    const sendEmailReset = (e) => {
+        e.preventDefault()
+        setShowForgotPasswordLink(false)
+        fetch(`/api/administrator/forgot-password`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        })
+    }
 
     const handleChange = (e) => {
         setFormInput({
@@ -41,6 +68,7 @@ const AdminLogin = ({ ...props }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setIsSubmitting(true)
 
         fetch('/api/auth/login', {
             method: "POST",
@@ -52,10 +80,7 @@ const AdminLogin = ({ ...props }) => {
         })
             .then(response => response.json())
             .then(response => {
-                console.log(response)
-                return response
-            })
-            .then(response => {
+                setIsSubmitting(false)
                 if (response.data.jwt) {
                     localStorage.setItem('jwt', response.data.jwt)
                     dispatch({ type: "ADMIN_LOGIN" })
@@ -65,27 +90,40 @@ const AdminLogin = ({ ...props }) => {
     }
 
     return (
-        <div className="admin-login" style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100vh",
-        }}>
-            <img style={{ maxWidth: "10%", marginBottom: "1rem" }} src="/media/logo.png" alt="Company logo." />
-            <h1>Administrative Login</h1>
-            <h2>Company</h2>
-            <form style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-            }}>
-                <label htmlFor="email">Email</label>
-                <input type="text" name="email" onChange={handleChange} value={formInput.email} required />
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" onChange={handleChange} value={formInput.password} required />
+        <div className="admin-login">
+            <img className="company-logo" src="/favicon.ico" alt="Company logo." />
+            <h1 className="h1">Administrative Login</h1>
+            <form className="form">
+                <label htmlFor="email">Admin Email</label>
+                <input
+                    type="text"
+                    name="email"
+                    onChange={handleChange}
+                    value={formInput.email}
+                />
+                <label htmlFor="password">Admin Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    onChange={handleChange}
+                    value={formInput.password}
+                />
+                <div className="container-forgot-password">
+                    <button
+                        type="button"
+                        className="forgot-password-link"
+                        onClick={(e) => { e.preventDefault(); setShowForgotPasswordLink(true) }}
+                    >
+                        Forgot Password?
+                    </button>
+                    <button
+                        type="button"
+                        className="email-reset"
+                        onClick={sendEmailReset}
+                    >
+                        Send Reset Email
+                        </button>
+                </div>
                 {
                     submissionErrors === 'Form initialized.' ? null :
                         submissionErrors.length === 0 ? null :
@@ -95,7 +133,14 @@ const AdminLogin = ({ ...props }) => {
                                 })}
                             </ul>
                 }
-                <button id="submit" onClick={handleSubmit}>Login</button>
+                <button
+                    id="submit"
+                    type="submit"
+                    className="submit"
+                    onClick={handleSubmit}
+                >
+                    {isSubmitting ? "..." : "Login"}
+                </button>
             </form>
         </div>
     )

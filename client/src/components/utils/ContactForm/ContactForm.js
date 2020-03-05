@@ -25,7 +25,7 @@ const ContactForm = (props) => {
     const submit = e => {
         e.preventDefault()
         setButtonText("...")
-        fetch('/api/send-message', {
+        fetch('/api/mail/contact-form', {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -35,7 +35,6 @@ const ContactForm = (props) => {
         })
             .then(res => res.json())
             .then(res => {
-                console.log(res)
                 if (res.success === false) {
                     setErrors(res.errors)
                     setButtonText("Send")

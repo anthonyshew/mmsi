@@ -14,7 +14,7 @@ const AdminDashboard = ({ ...props }) => {
     const [, dispatch] = useStateValue()
 
     const handleLogout = (e) => {
-        fetch('/api/auth/auth/logout')
+        fetch('/api/auth/logout')
             .then(response => {
                 localStorage.clear('jwt')
                 dispatch({
