@@ -14,8 +14,9 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-remove-trailing-slashes',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-express',
       options: {

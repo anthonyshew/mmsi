@@ -1,1 +1,5 @@
-This is a Gatsby front-end application.
+MMSI Website.
+
+Changelog
+
+2.0.0 - Migrate to Gatsby.
