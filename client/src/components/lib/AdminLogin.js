@@ -56,7 +56,10 @@ const AdminLogin = ({ ...props }) => {
                 return response
             })
             .then(response => {
-                if (response.data.jwt) localStorage.setItem('jwt', response.data.jwt)
+                if (response.data.jwt) {
+                    localStorage.setItem('jwt', response.data.jwt)
+                    dispatch({ type: "ADMIN_LOGIN" })
+                }
                 setSubmissionErrors(response.errors)
             })
     }
@@ -70,7 +73,7 @@ const AdminLogin = ({ ...props }) => {
             width: "100%",
             height: "100vh",
         }}>
-            <img style={{ maxWidth: "10%", marginBottom: "1rem" }} src="/media/placeholder-logo.png" alt="Company logo." />
+            <img style={{ maxWidth: "10%", marginBottom: "1rem" }} src="/media/logo.png" alt="Company logo." />
             <h1>Administrative Login</h1>
             <h2>Company</h2>
             <form style={{

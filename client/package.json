@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "mmsi",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Mission Mechanical Services Inc.'s Website",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -14,7 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.19.23",
+    "gatsby": "^2.19.28",
     "gatsby-plugin-sass": "^2.1.29",
     "gsap": "^3.0.4",
     "node-sass": "^4.13.1",
