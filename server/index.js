@@ -67,7 +67,7 @@ if (!isDev && cluster.isMaster) {
   app.use('/api', api)
 
   app.get('/owner-admin', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/public', 'owner-admin.html'))
+    res.sendFile(path.resolve(__dirname, '../client/public/owner-admin', 'index.html'))
   })
 
   // All remaining requests return the React app, so it can handle routing.
