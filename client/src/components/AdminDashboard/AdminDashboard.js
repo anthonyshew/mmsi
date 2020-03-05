@@ -3,13 +3,11 @@ import { Router, Link, navigate } from '@reach/router'
 import './_AdminDashboard.scss'
 
 import useStateValue from '../../lib/hooks/useStateValue'
-import useViewportDimensions from '../../lib/hooks/useViewportDimensions'
 import ContentEditor from './ContentEditor'
 import Settings from './Settings'
 import ServiceRequest from './ServiceRequest'
 
 const AdminDashboard = ({ ...props }) => {
-    const [width] = useViewportDimensions()
 
     const [, dispatch] = useStateValue()
 
@@ -24,22 +22,11 @@ const AdminDashboard = ({ ...props }) => {
         navigate(`/`)
     }
 
-    if (width < 1000) {
-        return (
-            <div style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-            }}>
-                <p>Sorry, but we haven't optimized this view for mobile yet. Please open this back up on a desktop.</p>
-            </div>
-        )
-    }
-
     return (
         <div className="dashboard">
+            <div className="responsive-warning">
+                <p>Sorry, but we haven't optimized this view for mobile yet. Please open this back up on a desktop.</p>
+            </div>
             <div className="container-admin">
                 <div className="sidebar">
                     <h1>Admin Dashboard</h1>
