@@ -5,11 +5,15 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://missionmechanicalservices.com"
+  },
   proxy: {
     prefix: "/api",
     url: "http://localhost:5000"
   },
   plugins: [
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-sass',
     'gatsby-plugin-remove-trailing-slashes',
     {
