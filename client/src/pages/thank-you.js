@@ -10,7 +10,7 @@ const ThankYou = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <title>"Thank You - Mission Mechanical Services Inc."</title>
+                <title>Thank You - Mission Mechanical Services Inc.</title>
                 <meta name="description" content=" Thank you from all of us at MMSI!" />
             </Helmet>
             <Navbar />

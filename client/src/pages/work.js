@@ -15,7 +15,7 @@ const Work = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <title>"Our Projects - Mission Mechanical Services Inc."</title>
+                <title>Our Projects - Mission Mechanical Services Inc.</title>
                 <meta name="description" content=" The projects and work done by MMSI." />
             </Helmet>
             <Navbar />

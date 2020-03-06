@@ -73,7 +73,7 @@ const Home = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <title>"Home - Mission Mechanical Services Inc."</title>
+                <title>Home - Mission Mechanical Services Inc.</title>
                 <meta name="description" content=" The digital home of Mission Mechanical Services Inc." />
             </Helmet>
             <Navbar />
