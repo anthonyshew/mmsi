@@ -8,11 +8,10 @@ import Footer from '../components/utils/Footer/Footer'
 const ThankYou = (props) => {
     return (
         <>
-            <Helmet
-                title="Thank You - Mission Mechanical Services Inc."
-                description="Thank you from all of us at MMSI!"
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Thank You - Mission Mechanical Services Inc." />
+                <meta description="Thank you from all of us at MMSI!" />
             </Helmet>
             <Navbar />
             <main className="container-thank-you">

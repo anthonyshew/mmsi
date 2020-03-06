@@ -92,11 +92,10 @@ const AdminLogin = ({ ...props }) => {
 
     return (
         <div className="admin-login">
-            <Helmet
-                title="Admin Login - Mission Mechanical Services Inc."
-                description="Log into the MMSI Administrative Dashboard."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Admin Login - Mission Mechanical Services Inc." />
+                <meta description="Log into the MMSI Administrative Dashboard." />
             </Helmet>
             <img className="company-logo" src="/favicon.ico" alt="Company logo." />
             <h1 className="h1">Administrative Login</h1>

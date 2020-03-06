@@ -18,11 +18,10 @@ const About = (props) => {
 
     return (
         <>
-            <Helmet
-                title="About - Mission Mechanical Services Inc."
-                description="About our company."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="About - Mission Mechanical Services Inc." />
+                <meta description="About our company." />
             </Helmet>
             <Navbar />
             <main className="about">

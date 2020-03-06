@@ -10,11 +10,10 @@ const NoMatch = (props) => {
 
     return (
         <>
-            <Helmet
-                title="Page Does Not Exist - Mission Mechanical Services Inc."
-                description="This page does not exist."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Page Does Not Exist - Mission Mechanical Services Inc." />
+                <meta description="This page does not exist." />
             </Helmet>
             <Navbar />
             <div className="page-404">

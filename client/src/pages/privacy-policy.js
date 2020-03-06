@@ -8,11 +8,10 @@ import Footer from '../components/utils/Footer/Footer'
 const PrivacyPolicy = (props) => {
     return (
         <>
-            <Helmet
-                title="Privacy Policy - Mission Mechanical Services Inc."
-                description="The privacy policy of MMSI."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Privacy Policy - Mission Mechanical Services Inc." />
+                <meta description="The privacy policy of MMSI." />
             </Helmet>
             <Navbar />
             <div className="privacy-policy">

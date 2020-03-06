@@ -25,11 +25,10 @@ const AdminDashboard = ({ ...props }) => {
 
     return (
         <div className="dashboard">
-            <Helmet
-                title="Adion Dashboard- Mission Mechanical Services Inc."
-                description="Welcome to your administrative panel, Tia or Rick or maybe even Brett."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Adion Dashboard- Mission Mechanical Services Inc." />
+                <meta description="Welcome to your administrative panel, Tia or Rick or maybe even Brett." />
             </Helmet>
             <div className="responsive-warning">
                 <p>Sorry, but we haven't optimized this view for mobile yet. Please open this back up on a desktop.</p>

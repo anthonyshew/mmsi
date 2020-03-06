@@ -13,11 +13,10 @@ const Work = (props) => {
 
     return (
         <>
-            <Helmet
-                title="Our Projects - Mission Mechanical Services Inc."
-                description="The projects and work done by MMSI."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Our Projects - Mission Mechanical Services Inc." />
+                <meta description="The projects and work done by MMSI." />
             </Helmet>
             <Navbar />
             <main className="container-work">

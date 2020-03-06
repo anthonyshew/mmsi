@@ -71,11 +71,10 @@ const Home = (props) => {
 
     return (
         <>
-            <Helmet
-                title="Home - Mission Mechanical Services Inc."
-                description="The digital home of Mission Mechanical Services Inc."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Home - Mission Mechanical Services Inc." />
+                <meta description="The digital home of Mission Mechanical Services Inc." />
             </Helmet>
             <Navbar />
             <main className="home">

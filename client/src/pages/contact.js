@@ -9,11 +9,10 @@ import Footer from '../components/utils/Footer/Footer'
 const Home = (props) => {
     return (
         <>
-            <Helmet
-                title="Contact Us - Mission Mechanical Services Inc."
-                description="Information on how to contact us."
-            >
+            <Helmet>
                 <html lang="en" />
+                <meta title="Contact Us - Mission Mechanical Services Inc." />
+                <meta description="Information on how to contact us." />
             </Helmet>
             <Navbar />
             <main className="home">
