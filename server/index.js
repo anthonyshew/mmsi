@@ -61,6 +61,7 @@ if (!isDev && cluster.isMaster) {
   app.use('/api', api)
 
   app.use(express.static(path.resolve(__dirname, '../client/public/')))
+  app.use("/reset-password/*", express.static(path.resolve(__dirname, '../client/public/reset-password')))
   app.use(gatsbyExpress(path.resolve(__dirname, '../client/config/gatsby-express.json'), {
     publicDir: path.resolve(__dirname, '../client/public/'),
     template: path.resolve(__dirname, '../client/public/404/index.html'),
