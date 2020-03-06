@@ -27,7 +27,7 @@ const AdminDashboard = ({ ...props }) => {
         <div className="dashboard">
             <Helmet>
                 <html lang="en" />
-                <title>"Admin Dashboard- Mission Mechanical Services Inc." </title>
+                <title>"Admin Dashboard- Mission Mechanical Services Inc."</title>
                 <meta name="description" content=" Welcome to your administrative panel, Tia or Rick or maybe even Brett." />
             </Helmet>
             <div className="responsive-warning">

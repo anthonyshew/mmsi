@@ -10,7 +10,7 @@ const PrivacyPolicy = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <title>"Privacy Policy - Mission Mechanical Services Inc." </title>
+                <title>"Privacy Policy - Mission Mechanical Services Inc."</title>
                 <meta name="description" content=" The privacy policy of MMSI." />
             </Helmet>
             <Navbar />

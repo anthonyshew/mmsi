@@ -12,7 +12,7 @@ const NoMatch = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <title>"Page Does Not Exist - Mission Mechanical Services Inc." </title>
+                <title>"Page Does Not Exist - Mission Mechanical Services Inc."</title>
                 <meta name="description" content=" This page does not exist." />
             </Helmet>
             <Navbar />
