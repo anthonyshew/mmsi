@@ -59,8 +59,8 @@ const ResetPassword = ({ ...props }) => {
             <>
                 <Helmet>
                     <html lang="en" />
-                    <meta title="Reset Password - Mission Mechanical Services Inc." />
-                    <meta description="Reset the administrative password of MMSI (with the proper credentials)." />
+                    <title>"Reset Password - Mission Mechanical Services Inc." </title>
+                    <meta name="description" content=" Reset the administrative password of MMSI (with the proper credentials)." />
                 </Helmet>
                 <Navbar />
                 <main className="container-reset-password">

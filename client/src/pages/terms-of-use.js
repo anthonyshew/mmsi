@@ -10,8 +10,8 @@ const TermsOfUse = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <meta title="Terms of Use - Mission Mechanical Services Inc." />
-                <meta description="The terms of us of the MMSI website." />
+                <title>"Terms of Use - Mission Mechanical Services Inc." </title>
+                <meta name="description" content=" The terms of us of the MMSI website." />
             </Helmet>
             <Navbar />
             <div className="terms-of-use">

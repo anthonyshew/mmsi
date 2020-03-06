@@ -20,8 +20,8 @@ const About = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <meta title="About - Mission Mechanical Services Inc." />
-                <meta description="About our company." />
+                <title>"About - Mission Mechanical Services Inc." </title>
+                <meta name="description" content=" About our company." />
             </Helmet>
             <Navbar />
             <main className="about">

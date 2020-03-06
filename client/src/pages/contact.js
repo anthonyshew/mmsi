@@ -11,8 +11,8 @@ const Home = (props) => {
         <>
             <Helmet>
                 <html lang="en" />
-                <meta title="Contact Us - Mission Mechanical Services Inc." />
-                <meta description="Information on how to contact us." />
+                <title>"Contact Us - Mission Mechanical Services Inc." </title>
+                <meta name="description" content=" Information on how to contact us." />
             </Helmet>
             <Navbar />
             <main className="home">
