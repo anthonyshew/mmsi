@@ -98,7 +98,6 @@ const Menu = (props) => {
                     </span>))}
             </nav>
             <svg className="thermostat" viewBox="0 0 645 404" fill="none" xmlns="http://www.w3.org/2000/svg">
-
                 <rect width="645" height="404" rx="25" fill="#CFCFCF" />
                 <rect x="24" y="22" width="597" height="360" rx="25" fill="#D8D8D8" />
                 <path d="M109 99C109 85.1929 120.193 74 134 74H425V330H134C120.193 330 109 318.807 109 305V99Z" fill="#B0B8CD" />
