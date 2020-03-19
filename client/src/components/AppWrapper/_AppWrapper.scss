@@ -7,6 +7,8 @@
     font-family: $open-sans;
     color: $blue;
     overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 #gatsby-focus-wrapper {
