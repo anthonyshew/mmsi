@@ -29,7 +29,8 @@ router.post(`/contact-form`, (req, res) => {
     } else {
         const emailMessage = {
             to: process.env.EMAIL_TO,
-            from: email,
+            from: process.env.EMAIL_FROM,
+            replyTo: email,
             subject: 'Message from Website Contact Form!',
             html: `<h1>Incoming Mail from your website!</h1>
         <h2>${name} said...</h2>
