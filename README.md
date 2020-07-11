@@ -1,3 +1,5 @@
+MMSI Website.
+
 Changelog
 
-2.0.0 - Compatibility with Gatsby front end.
+2.0.0 - Migrate to Gatsby.

@@ -1,0 +1,347 @@
+@import './_variables.scss';
+
+.about {
+    font-family: $open-sans;
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .headline {
+        font-size: 24px;
+        margin-top: 2rem;
+        margin-left: 25%;
+        margin-right: 5%;
+        margin-bottom: 2rem;
+        line-height: 150%;
+    }
+
+    .container-quick-facts {
+        position: relative;
+
+        h2 {
+            margin-right: 12rem;
+            text-align: right;
+            font-family: $passion;
+            font-size: 52px;
+            color: $gray;
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 5%;
+            right: 15%;
+            height: 250px;
+        }
+
+        ul {
+            margin-left: 2rem;
+
+            li {
+                padding: .5rem;
+                font-size: 24px;
+
+                h3 {
+                    font-weight: 900;
+                }
+
+                p {
+                    margin-top: .2rem;
+                    margin-left: 4rem;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .core-values {
+        padding-top: 2rem;
+
+        .values-h2 {
+            width: 25%;
+            margin-top: .5rem;
+            text-align: center;
+            font-family: $passion;
+            font-size: 52px;
+        }
+
+        .container-rows {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .row:first-of-type {
+                height: 50px;
+                margin-bottom: 0;
+                background: linear-gradient(90deg, $white 25%, $offwhite 25%);
+                color: $gray;
+            }
+
+            .row {
+                width: 100%;
+                height: 250px;
+            }
+
+            .left,
+            .right {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .left {
+                position: absolute;
+                width: 25%;
+                height: 250px;
+                font-size: 20px;
+
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .right {
+                position: absolute;
+                left: 25%;
+                width: 75%;
+                height: 250px;
+                background-color: $offwhite;
+                line-height: 150%;
+                font-size: 18px;
+
+                p {
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+
+    .team {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        color: $white;
+        background-color: $gray;
+
+        h2 {
+            display: block;
+            padding: 1rem 0;
+            font-size: 48px;
+            font-family: $passion;
+        }
+
+        .team-svg {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            height: 336px;
+        }
+
+        .team-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 2rem 0;
+            background-color: $gray;
+
+            .teammate {
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 1rem;
+
+                .teammate-photo {
+                    text-align: center;
+                    max-height: 105px;
+                    border-radius: 1rem;
+
+                    &.image {
+                        box-shadow: 0px 2px 5px $blue;
+                    }
+                }
+
+                h3 {
+                    margin-top: 1rem;
+                    font-family: $passion;
+                    font-size: 24px;
+                }
+
+                h4 {
+                    padding: .5rem 0;
+                }
+            }
+        }
+
+        .first-team-row {
+            justify-content: space-between;
+            background-color: $white;
+
+            .container-title {
+                font-size: 52px;
+                margin-right: 3%;
+                font-family: $passion;
+                color: $gray;
+            }
+
+            .teammate {
+                margin-left: 10rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .about {
+        .headline {
+            width: 90%;
+            margin: 2rem auto;
+            font-size: 18px;
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .about {
+        .container-quick-facts {
+
+            h2 {
+                margin: 0;
+                text-align: center;
+            }
+
+            .logo {
+                display: none;
+            }
+        }
+
+        .word-break {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .about {
+        .core-values {
+            .values-h2 {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media (max-width: 909px) {
+    .about {
+
+        .core-values {
+            padding: 0;
+
+            .values-h2 {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                font-size: 52px;
+            }
+
+            .container-rows {
+                .row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: initial;
+                    margin-top: 2rem;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    .left,
+                    .right {
+                        position: relative;
+                        top: initial;
+                        left: initial;
+                        bottom: initial;
+                        right: initial;
+                        height: initial;
+                        text-align: center;
+                    }
+
+                    .left {
+                        height: initial;
+                        padding-bottom: 1rem;
+                    }
+
+                    .right {
+                        height: initial;
+                        background-color: transparent;
+
+                        p {
+                            width: 135%;
+                        }
+                    }
+                }
+
+                .row:first-of-type {
+                    height: auto;
+                    padding: 0;
+                    background: transparent;
+                }
+            }
+        }
+
+        .team {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+
+            .team-svg {
+                display: none;
+            }
+
+            .team-row {
+                padding: 0;
+                // color: $blue;
+                // background-color: $white;
+
+                .teammate {
+                    margin-top: 2rem;
+                }
+            }
+
+            .first-team-row {
+                flex-direction: column-reverse;
+                justify-content: center;
+                margin-top: 2rem;
+
+                .container-title {
+                    margin: 0;
+                    margin-bottom: 2rem;
+                }
+
+                .teammate {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .about {
+        .team {
+            .team-row {
+                flex-direction: column;
+            }
+        }
+    }
+}
